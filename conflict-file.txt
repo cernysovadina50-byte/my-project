@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 ВЕРСИЯ ИЗ MASTER
+=======
+ВЕРСИЯ ИЗ FEATURE-BRANCH
+>>>>>>> feature-branch
