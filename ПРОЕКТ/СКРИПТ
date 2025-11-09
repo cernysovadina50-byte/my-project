@@ -1,0 +1,22 @@
+// Получаем элементы со страницы
+const taskInput = document.getElementById('taskInput');
+const taskList = document.getElementById('taskList');
+
+// Функция добавления новой задачи
+function addTask() {
+  if (taskInput.value === '') {
+    alert('Введите задачу!');
+    return;
+  }
+
+  const taskItem = document.createElement('li');
+  taskItem.textContent = taskInput.value;
+
+  // Удаляем задачу при клике
+  taskItem.onclick = function () {
+    this.remove();
+  };
+
+  taskList.appendChild(taskItem);
+  taskInput.value = '';
+}

@@ -1,0 +1,13 @@
+// Функция для подсчета количества слов
+function countWords(text) {
+    // Удаляем лишние пробелы и разбиваем текст на слова
+    const words = text.trim().split(/s+/);
+    return words.filter(word => word.length > 0).length;
+}
+
+// Пример текста
+const sampleText = "Привет, как дела? Это пример текста для подсчета слов.";
+
+// Подсчет и вывод результата
+const wordCount = countWords(sampleText);
+console.log(Количество слов: ${wordCount});

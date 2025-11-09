@@ -1,0 +1,46 @@
+console.log('Программа запущена');
+
+// Объявление переменных
+const user1 = 'Иван'; // Попробуйте переименовать (F2)
+const userAge = 30;
+const isActive = true;
+
+// Функция с преднамеренной ошибкой в названии
+function calculatYearsToRetirement(age) {
+  // Опечатка (используем Quick Fix - Ctrl+.)
+  const retirementAge = 65;
+  return retirementAge - age;
+}
+
+// Вызов функции с логированием
+console.log('До пенсии осталось лет:', calculatYearsToRetirement(userAge));
+
+// Условная конструкция
+if (isActive) {
+  console.log('Пользователь активен');
+} else {
+  console.log('Пользователь неактивен');
+}
+
+// Массив с демонстрацией автодополнения
+const skills = ['HTML', 'CSS', 'JavaScript'];
+console.log('Навыки пользователя:', skills.join(', '));
+
+// Объект пользователя
+const user = {
+  name: user1,
+  age: userAge,
+  skills: skills,
+};
+
+// Использование debugger
+function displayUserInfo(userObj) {
+  debugger; // Точка останова для отладки
+  console.log('Информация о пользователе:');
+  console.log('Имя:', userObj.name);
+  console.log('Возраст:', userObj.age);
+}
+
+displayUserInfo(user);
+
+console.log('Программа завершена');
